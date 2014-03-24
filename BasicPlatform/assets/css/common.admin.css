@@ -1,0 +1,33 @@
+﻿
+@media (max-width: 979px) {
+    body { padding-top: 0; padding-bottom: 40px; }
+}
+@media (min-width: 980px) {
+    body { padding-top: 60px; padding-bottom: 40px; }
+}
+
+.hero-unit .input-xlarge { height: 27px; font-size: 16px; margin: 0 10px 0 0; }
+.hero-unit .form-inline { text-align: center; margin: 150px 0; }
+.h15 { height: 15px; }
+.sidebar-nav { padding: 9px 0; }
+header .btn-group { padding: 15px 0 0 0; margin-left: 10px; }
+#filter .form-actions { background-color: transparent; margin-bottom: 0; padding-bottom: 0; }
+#filter { margin-top: 15px; }
+.accordion-heading { }
+.accordion-heading h5 { margin: 0; font-weight: normal; background-color: #fafafa; background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2)); background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2); background-image: -o-linear-gradient(top, #ffffff, #f2f2f2); background-image: linear-gradient(to bottom, #ffffff, #f2f2f2); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0); -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); }
+.label a { color: #fff; }
+ul.dropdown-menu > li > a > [class^="icon-"], ul.dropdown-menu > li > a > [class*=" icon-"] { margin-left: -14px; }
+
+.btn-large [class^="icon-"], .btn-large [class*=" icon-"] { vertical-align: middle; margin-top: 0px; }
+.vertical-top, .btn.vertical-top, .btn.vertical-top + .help-inline { vertical-align: top; }
+.vertical-bottom, .btn.vertical-bottom, .vertical-bottom, .btn.vertical-bottom + .help-inline { vertical-align: bottom; }
+.form-horizontal .btn + .help-inline { padding-bottom: 5px; padding-top: 5px; }
+.form-horizontal .btn + .help-block { margin-top: 10px; }
+.select2-search input{border-radius: 4px;}
+.select2-container .select2-choice abbr{ top: 7px;}
+.select2-results .select2-highlighted, .select2-results .select2-highlighted .muted{border-radius:4px;}
+.select2-drop{-webkit-border-radius: 0 0 8px 8px;
+-moz-border-radius: 0 0 8px 8px;
+border-radius: 0 0 8px 8px;}
+.select2-container-active .select2-choice, .select2-container-active .select2-choices{border: 1px solid #049cdb;}
+.row-fluid .select2-container[class*="span"],.row .select2-container[class*="span"]{display: inline-block; float:none;margin-left:0;}

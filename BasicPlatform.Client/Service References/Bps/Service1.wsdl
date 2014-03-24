@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ops.vp.uitv.com.cn/Wcf/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ops.vp.uitv.com.cn/Wcf/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ops.vp.uitv.com.cn/Wcf/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BasicPlatform.Web.Models" />
+      <xsd:import schemaLocation="http://ops.vp.uitv.com.cn/Wcf/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MongoDB.Bson" />
+      <xsd:import schemaLocation="http://ops.vp.uitv.com.cn/Wcf/Service.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetUserByAlias_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAlias" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUserByAlias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAliasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ValidateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_ValidateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUsersInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRole" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUsersInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_IsUserInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInRole" />
+  </wsdl:message>
+  <wsdl:message name="IService_IsUserInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_IsRoleExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRoleExists" />
+  </wsdl:message>
+  <wsdl:message name="IService_IsRoleExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRoleExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApp" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUserByAccessToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUserByAccessToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAliasByAccessToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAliasByAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAliasByAccessToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAliasByAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAliasByAccessToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAliasByAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAliasByAccessToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAliasByAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAliasOfUserByAccessToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAliasOfUserByAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAliasOfUserByAccessToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAliasOfUserByAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAliasOfUserByAccessToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAliasOfUserByAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAliasOfUserByAccessToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAliasOfUserByAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetActions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActions" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetActions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetUserByAlias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUserByAlias" message="tns:IService_GetUserByAlias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUserByAliasResponse" message="tns:IService_GetUserByAlias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUser" message="tns:IService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUserResponse" message="tns:IService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUserById" message="tns:IService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUserByIdResponse" message="tns:IService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ValidateUser" message="tns:IService_ValidateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ValidateUserResponse" message="tns:IService_ValidateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUsers" message="tns:IService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUsersResponse" message="tns:IService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUsersInRole" message="tns:IService_GetUsersInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUsersInRoleResponse" message="tns:IService_GetUsersInRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetRoles" message="tns:IService_GetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetRolesResponse" message="tns:IService_GetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetRolesForUser" message="tns:IService_GetRolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetRolesForUserResponse" message="tns:IService_GetRolesForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserInRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/IsUserInRole" message="tns:IService_IsUserInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/IsUserInRoleResponse" message="tns:IService_IsUserInRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRoleExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/IsRoleExists" message="tns:IService_IsRoleExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/IsRoleExistsResponse" message="tns:IService_IsRoleExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetApp" message="tns:IService_GetApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAppResponse" message="tns:IService_GetApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAccessToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetUserByAccessToken" message="tns:IService_GetUserByAccessToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetUserByAccessTokenResponse" message="tns:IService_GetUserByAccessToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAliasByAccessToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SetAliasByAccessToken" message="tns:IService_SetAliasByAccessToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SetAliasByAccessTokenResponse" message="tns:IService_SetAliasByAccessToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAliasByAccessToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAliasByAccessToken" message="tns:IService_GetAliasByAccessToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAliasByAccessTokenResponse" message="tns:IService_GetAliasByAccessToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAliasOfUserByAccessToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SetAliasOfUserByAccessToken" message="tns:IService_SetAliasOfUserByAccessToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SetAliasOfUserByAccessTokenResponse" message="tns:IService_SetAliasOfUserByAccessToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAliasOfUserByAccessToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAliasOfUserByAccessToken" message="tns:IService_GetAliasOfUserByAccessToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAliasOfUserByAccessTokenResponse" message="tns:IService_GetAliasOfUserByAccessToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetActions" message="tns:IService_GetActions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetActionsResponse" message="tns:IService_GetActions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserByAlias">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUserByAlias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/IService/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUsersInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://tempuri.org/IService/GetRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesForUser">
+      <soap:operation soapAction="http://tempuri.org/IService/GetRolesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserInRole">
+      <soap:operation soapAction="http://tempuri.org/IService/IsUserInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRoleExists">
+      <soap:operation soapAction="http://tempuri.org/IService/IsRoleExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApp">
+      <soap:operation soapAction="http://tempuri.org/IService/GetApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAccessToken">
+      <soap:operation soapAction="http://tempuri.org/IService/GetUserByAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAliasByAccessToken">
+      <soap:operation soapAction="http://tempuri.org/IService/SetAliasByAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAliasByAccessToken">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAliasByAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAliasOfUserByAccessToken">
+      <soap:operation soapAction="http://tempuri.org/IService/SetAliasOfUserByAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAliasOfUserByAccessToken">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAliasOfUserByAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActions">
+      <soap:operation soapAction="http://tempuri.org/IService/GetActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://ops.vp.uitv.com.cn/Wcf/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

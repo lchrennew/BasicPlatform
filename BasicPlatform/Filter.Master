@@ -1,0 +1,15 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Filter.master.cs" Inherits="BasicPlatform.Filter" %>
+<!doctype>
+<html lang="zh-cn">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:PlaceHolder runat="server" ID="ph">
+        <asp:ContentPlaceHolder ID="filter" runat="server">
+        </asp:ContentPlaceHolder>
+    </asp:PlaceHolder>
+</body>
+</html>

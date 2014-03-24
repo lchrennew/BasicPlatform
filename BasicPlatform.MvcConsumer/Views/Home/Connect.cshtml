@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Connect";
+}
+<h2>
+    Connect</h2>
+<form action="@Url.Action("StartConnect", "Home", new { returnurl = Request.QueryString["returnurl"] })" method="post">
+<input type="text" name="username" value="" />
+<input type="submit" value="submit" />
+</form>

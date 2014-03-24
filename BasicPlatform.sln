@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{49B0003C-191D-4F1F-9FDA-8F5E3CB70771}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0A9CCC68-A5EE-4BC9-9574-6175DC4274CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform", "BasicPlatform\BasicPlatform.csproj", "{8E1B2706-41B4-49BE-AA8B-A4AAB0491108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform.Web", "BasicPlatform.Web\BasicPlatform.Web.csproj", "{9AEC7DFF-A0A3-4F3D-8116-49F534861899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform.Config", "BasicPlatform.Config\BasicPlatform.Config.csproj", "{0E3FD54F-6A26-4877-B972-8AECFFAC8767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform.Client", "BasicPlatform.Client\BasicPlatform.Client.csproj", "{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108} = {8E1B2706-41B4-49BE-AA8B-A4AAB0491108}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform.WebFormConsumer", "BasicPlatform.WebFormConsumer\BasicPlatform.WebFormConsumer.csproj", "{2D509354-2A97-4EEC-901C-356B56C67391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlatform.MvcConsumer", "BasicPlatform.MvcConsumer\BasicPlatform.MvcConsumer.csproj", "{51598DAF-08A8-486D-B208-8054950DEDE4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://lichun1:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BasicPlatform.Client\\BasicPlatform.Client.csproj
+		SccProjectTopLevelParentUniqueName1 = BasicPlatform.sln
+		SccProjectName1 = BasicPlatform.Client
+		SccLocalPath1 = BasicPlatform.Client
+		SccProjectUniqueName2 = BasicPlatform.Config\\BasicPlatform.Config.csproj
+		SccProjectTopLevelParentUniqueName2 = BasicPlatform.sln
+		SccProjectName2 = BasicPlatform.Config
+		SccLocalPath2 = BasicPlatform.Config
+		SccProjectUniqueName3 = BasicPlatform.MvcConsumer\\BasicPlatform.MvcConsumer.csproj
+		SccProjectTopLevelParentUniqueName3 = BasicPlatform.sln
+		SccProjectName3 = BasicPlatform.MvcConsumer
+		SccLocalPath3 = BasicPlatform.MvcConsumer
+		SccProjectUniqueName4 = BasicPlatform.Web\\BasicPlatform.Web.csproj
+		SccProjectTopLevelParentUniqueName4 = BasicPlatform.sln
+		SccProjectName4 = BasicPlatform.Web
+		SccLocalPath4 = BasicPlatform.Web
+		SccProjectUniqueName5 = BasicPlatform.WebFormConsumer\\BasicPlatform.WebFormConsumer.csproj
+		SccProjectTopLevelParentUniqueName5 = BasicPlatform.sln
+		SccProjectName5 = BasicPlatform.WebFormConsumer
+		SccLocalPath5 = BasicPlatform.WebFormConsumer
+		SccProjectUniqueName6 = BasicPlatform\\BasicPlatform.csproj
+		SccProjectTopLevelParentUniqueName6 = BasicPlatform.sln
+		SccProjectName6 = BasicPlatform
+		SccLocalPath6 = BasicPlatform
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEC7DFF-A0A3-4F3D-8116-49F534861899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEC7DFF-A0A3-4F3D-8116-49F534861899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEC7DFF-A0A3-4F3D-8116-49F534861899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEC7DFF-A0A3-4F3D-8116-49F534861899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E3FD54F-6A26-4877-B972-8AECFFAC8767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E3FD54F-6A26-4877-B972-8AECFFAC8767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E3FD54F-6A26-4877-B972-8AECFFAC8767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E3FD54F-6A26-4877-B972-8AECFFAC8767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D509354-2A97-4EEC-901C-356B56C67391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D509354-2A97-4EEC-901C-356B56C67391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D509354-2A97-4EEC-901C-356B56C67391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D509354-2A97-4EEC-901C-356B56C67391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51598DAF-08A8-486D-B208-8054950DEDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51598DAF-08A8-486D-B208-8054950DEDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51598DAF-08A8-486D-B208-8054950DEDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51598DAF-08A8-486D-B208-8054950DEDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31DA88AD-CFCA-44B2-8949-D0C831CEC2B3} = {49B0003C-191D-4F1F-9FDA-8F5E3CB70771}
+		{2D509354-2A97-4EEC-901C-356B56C67391} = {49B0003C-191D-4F1F-9FDA-8F5E3CB70771}
+		{51598DAF-08A8-486D-B208-8054950DEDE4} = {49B0003C-191D-4F1F-9FDA-8F5E3CB70771}
+		{8E1B2706-41B4-49BE-AA8B-A4AAB0491108} = {0A9CCC68-A5EE-4BC9-9574-6175DC4274CC}
+		{9AEC7DFF-A0A3-4F3D-8116-49F534861899} = {0A9CCC68-A5EE-4BC9-9574-6175DC4274CC}
+		{0E3FD54F-6A26-4877-B972-8AECFFAC8767} = {0A9CCC68-A5EE-4BC9-9574-6175DC4274CC}
+	EndGlobalSection
+EndGlobal
